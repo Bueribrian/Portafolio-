@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ajax 3 - External API</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+    <style>
+    .user{
+        display: flex;
+        margin-top: 10px;
+        padding: 10px;
+        background: #f4f4f4;
+        box-shadow: 1px 1px 10px rgba(000,000,000,0.3);
+        text-align: center;
+        font-size: 20px;
+        font-family: 'Open Sans', sans-serif;
+        margin: 15px;
+    }
+    .user li{
+        list-style: none;
+    }
+    #img-load{
+        display: none;
+    }
+    </style>
+</head>
+
+<body>
+    <button id="button">Load GitHub Users</button>
+    <br>
+    <h1>GitHub Users</h1>
+    <div id="users">
+            <img id="img-load" src="https://i.gifer.com/7YQl.gif" alt="loading" width="200" />
+    </div>
+    <script>
+
+        document.getElementById('button').addEventListener('click',loadUsers)
+
+        var loading = document.getElementById('img-load')
+
+        function loadUsers (){
+            loading.style.display="block"
+            var xhr = new XMLHttpRequest()
+            xhr.open('GET','https://api.github.com/users', true)
+            xhr.onload = function() {
+                if(this.status ==200){
+                    loading.style.display='none'
+                    var users = JSON.parse(this.responseText)
+
+                    var output = ''
+                    for(var i in users){
+                        output+=`
+                        <div class="user">
+                        <img src="${users[i].avatar_url}" width="70" height="70">
+                            <ul>
+                                <li>ID : ${users[i].id}</li>
+                                <li>Login : ${users[i].login}</li>  
+                            </ul>
+                        </div>
+                        `
+                    }
+                    document.getElementById('users').innerHTML = output
+                }
+            }
+            xhr.send()
+        }
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//         function users() {
+            
+//             var xmlHttp = XMLHttpRequest()
+
+//             xmlHttp.open('GET', 'https://api.github.com/users', true)
+            
+//             xmlHttp.onload = function(){
+//                 if (this.status == 200) {
+//                     var users = JSON.parse(this.responseText)
+//                     identUser(users)
+//                 } else if (this.status == 404) {
+//                     alert('Todo para el orto')
+//                 }
+//             }
+//             xmlHttp.send()
+
+//         }
+//  function identUser (allusers){
+//             for(var i in allusers){
+//                var output =``
+//             output +=`
+//                 <ul>
+//                 <li>${alluser[i].id}</li>
+//                 </ul>
+//             `  
+//             }
+//            document.getElementById('users').innerHTML=output
+//         } 
+// document.getElementById('button').addEventListener('click', users)
+    </script>
+</body>
+
+</html>

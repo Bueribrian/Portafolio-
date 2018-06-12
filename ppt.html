@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/pptStyles.css">
+    <title>Document</title>
+</head>
+
+<body class="zoom">
+    <div class="container">
+        <div id="header" class="header">
+            <h1>Piedra Papel y Tijeras <br> <h2>Al mejor de 10</h2></h1>
+            
+        </div>
+        <div class="jugador">
+            <img id="img-jugador" src="img/game.jpg" alt="">
+
+        </div>
+
+        <div class="computadora">
+            <img id="img-computadora" src="img/game.jpg" alt="">
+        </div>
+        <div class="boton-jugar">
+            <button class="button-play" value='piedra' onclick="jugar('piedra')">Piedra</button>
+            <button class="button-play" value='papel' onclick="jugar('papel')">Papel</button>
+            <button class="button-play" value='tijera' onclick="jugar('tijera')">Tijeras</button>
+        </div>
+        <div class="contador">
+            <div class="zoom" id="perdidas">Perdidas : 0</div>
+            <div class="zoom" id="ganadas">Ganadas : 0</div>
+            <div class="zoom" id="empates">Empates : 0</div>
+        </div>
+    </div>
+
+    <div id="modal" class="modal ocultar">
+        <div class="message">
+            <h2 id="resultado"></h2>
+            <p>Seguir jugando?</p>
+            <button onclick="seguirJugando()" id="seguirJugando">Si</button>
+            <button onclick="noSeguirJugando()" id="noSeguirJugando">No</button>
+        </div>
+    </div>
+    <script src="js/pptScript.js"></script>
+</body>
+
+</html>

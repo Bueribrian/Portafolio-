@@ -1,0 +1,47 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+	<link rel="stylesheet" href="css/calStyles.css">
+	<title>Skynet</title>
+</head>
+<body class="container">
+	<h1 id="titulo">Calculadora</h1>
+
+	<div class="calculadora">
+		<p id="calculo2">0</p>
+		<p id="calculo1"></p>
+		<div class="block" onclick="borrado()">CE</div>
+		<div  class="block" onclick="borroTotal()">C</div>
+		
+		<div class="block" onclick="borradoParcial()">Br</div>
+		<div class="block" onclick="operar('/')">/</div>
+
+		<div value="7" class="block" onclick="numero('7')">7</div>
+		<div value="8" class="block" onclick="numero('8')">8</div>
+		<div value="9" class="block" onclick="numero('9')">9</div>
+		<div class="block" onclick="operar('*')">X</div>
+
+		<div value="4" class="block" onclick="numero('4')">4</div>
+		<div value="5" class="block" onclick="numero('5')">5</div>
+		<div value="6" class="block" onclick="numero('6')">6</div>
+		<div class="block" onclick="operar('-')">-</div>
+
+		<div value="1" class="block" onclick="numero('1')">1</div>
+		<div value="2" class="block" onclick="numero('2')">2</div>
+		<div value="3" class="block" onclick="numero('3')">3</div>
+		<div class="block" onclick="operar('+')">+</div>
+
+		<div value="0" class="block" onclick="numero('0')">0</div>
+		<div value="," class="block" onclick="numero(',')">,</div>
+		<div class="block" onclick="igualar()">=</div>
+		<div  class="block nada">s</div>
+	</div>
+<script src="js/calculadoraScript.js"></script>
+</body>
+
+</html>
