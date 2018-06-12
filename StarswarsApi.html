@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Title of the document</title>
+  <!-- Material Icon CDN -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Materialize CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <!-- Your custom styles -->
+  <link rel="stylesheet" href="css/starsWarsApi.css">
+  <!-- Used as an example only to position the footer at the end of the page.
+    You can delete these styles or move it to your custom css file -->
+  <style>
+    body {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1 0 auto;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="black">
+      <div class="nav-wrapper">
+        <div class="container">
+          <a href="#" class="left brand-logo">Stars
+            <span class="yellow-text">Wars</span>
+          </a>
+          <a href="#" data-activates="mobile-menu" class="right button-collapse">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul class="right hide-on-med-and-down">
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+            <li>
+              <a href="#">Info</a>
+            </li>
+            <li>
+              <a href="#">Swapi</a>
+            </li>
+          </ul>
+          <ul class="side-nav" id="mobile-menu">
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+            <li>
+              <a href="#">Info</a>
+            </li>
+            <li>
+              <a href="https://swapi.co">Swapi</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+      
+    
+    
+    <div id="containerPlanetas" class="container">
+      <br>
+      <div class="row">
+        <div class="col s4">
+          <button id="planetas" class="black yellow-text btn truncate">Planetas</button>
+
+          
+        </div>
+        <div class="col s4">
+          <button id="planeta" class="black yellow-text  btn truncate">Planeta random</button>
+
+          <div id="insertOneInfo" class="row"></div>
+        </div>
+        <div class="col s4">
+
+          <button class="black yellow-text btn" onclick=buscar()>Click para buscar</button>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="col s4">
+        <div id="insertInfo" class="row"></div>
+    
+      </div>
+    </div>
+    
+    
+       <img id="img-loading" class="img-loading disabled" height="100px" width="100px" src="https://camo.githubusercontent.com/0c394a0e5996343410dcafb13e65e6e6f997e4b6/68747470733a2f2f6d65646961312e67697068792e636f6d2f6d656469612f6939424c394a76597963786f492f3230302e676966"
+            alt="">
+     
+    
+         
+    <!-- Your content here -->
+  </main>
+
+
+
+
+
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  <!-- Materialize JS CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src="js/starsWarsApi.js"></script>
+  <script>
+
+    $("document").ready(function () {
+      $(".button-collapse").sideNav();
+    });
+  </script>
+</body>
+
+</html>

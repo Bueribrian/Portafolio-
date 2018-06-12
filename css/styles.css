@@ -1,0 +1,276 @@
+
+html,body{
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+
+span{
+    font-family: 'Roboto', sans-serif;
+}
+img{
+   width: 100%;
+}
+.wrapper{
+ background: #b8c5d6;
+ width: 100%;
+ padding:;
+ height: auto;
+}
+
+grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+#title{
+    font-size: 1.4em;
+    margin: 0;
+    padding: 0.5em;
+}
+.nav-icons{
+    margin-bottom: 20px;
+}
+.nav-icons i{
+    width: 31%;
+    padding: 10px 0px;
+    background: black;
+    border: 2px solid black;
+    box-sizing: border-box;
+    
+}
+.nav-icons a{
+    color: white; 
+    
+}
+
+.nav-icons a:hover{
+    color: black;
+    transition: 0.1s all;
+}
+.nav-icons a i:hover{
+    background: white;
+    transition: 0.2s all;
+}
+#img-slider{
+    height: 200px;
+}
+.proyectos{
+    background: white;
+    margin-top: -25px;
+    
+}
+.proyectos h2{
+    padding-top: 20px;
+}
+.img-card{
+    max-height: 250px;
+    overflow: hidden;
+}
+.card-box{
+    width: 90%;
+    margin: 5%;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+    display: inline-block;
+    
+}
+
+#info{
+    
+}
+.info-card{
+    padding: 1em;
+}
+
+.perfil-card{
+    background:;
+}
+.info-perfil{
+    padding: 1em;
+}
+.img-perfil img{
+    border-radius: 50% 50%;
+    width: 70%;
+    margin: 20px 0px;
+    
+}
+.skill{
+    padding: 1em;
+    background: black;
+}
+.skills-card{
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px ;
+   
+}
+.skill-img{
+    font-size: 100px;
+    color: #23ce6b;
+    text-shadow: 3px 3px black;
+}
+.info-skills-card{
+    padding: 1em;
+    color:#EDF5FC;
+}
+.contact-info{
+    text-align: left;
+  margin: 0px;
+  font-size: 1.3em;
+padding: 10px 0px;
+  background: #272d2d;
+}
+.contact-info ul{
+    margin: 0px;
+}
+.contact-info ul li{
+    list-style: none;
+    margin: 30px 0px;
+       
+}
+.contact-info ul li a{
+    text-decoration: ;
+    font-weight: lighter;
+    color: white;
+}
+
+
+
+/*MEDIA QUERYS*/
+
+@media(min-width:480px){
+    #img-slider{
+         height: 300px;
+    }
+    .contact-info{
+    text-align: center;
+  margin: 0px;
+  font-size: 1.5em;
+padding: 10px 0px;
+  background: #272d2d;
+}
+}
+@media(min-width:780px){
+        .wrapper{
+            width: 80%;
+            margin: 0px 10%;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.3)
+        }
+        #img-slider{
+             height: 400px;
+        }
+       #title{
+    font-size: 1.6em;
+        }
+    .nav-icons i{
+        width: 20%;
+        padding: 10px 0px;
+        background: black;
+        border: 2px solid black;
+        box-sizing: border-box;
+    }
+        .proyectos{
+            margin-top: -25px;
+        }
+        .card-box{
+            width: 39%;
+        }
+        .info-perfil{
+        padding: 3em;
+    }
+    .img-perfil img{
+        border-radius: 50% 50%;
+        width: 50%;
+        margin: 20px 0px;
+    }
+    .skill{
+        padding: 1em;
+        
+    }
+    .skills-card{
+        display: inline-block;
+        width: 41%;
+        margin:20px ;
+
+    }
+    .skill-img{
+        font-size: 100px;
+        color: #23ce6b;
+        text-shadow: 3px 3px black;
+    }
+    .info-skills-card{
+        padding: 1em;
+        color:#EDF5FC;
+    }
+     .contact-info{
+    text-align: center;
+  margin: 0px;
+  font-size: 1.7em;
+padding: 10px 0px;
+  background: #272d2d;
+}
+}
+@media(min-width:1200px){
+   
+        #img-slider{
+             height: 83vh;
+        }
+       #title{
+    font-size: 2em;
+        }
+    .nav-icons i{
+        width: 30%;
+        padding: 15px 0px;
+        background: black;
+        border: 2px solid black;
+        box-sizing: border-box;
+    }
+        .proyectos{
+            margin-top: -25px;
+        }
+        .card-box{
+            margin: 20px 10px;
+            padding: 0px;
+            width: 30%;
+        }
+        .info-perfil{
+            font-size: 1.4em;
+            padding: 3em 10em;
+    }
+    .img-perfil img{
+        border-radius: 50% 50%;
+        width: 29%;
+        margin: 20px 0px;
+    }
+    .skill{
+        padding: 1em;
+        
+    }
+    .skills-card{
+        display: inline-block;
+        width: 20%;
+        margin:20px ;
+
+    }
+    .skill-img{
+        font-size: 200px;
+        color: #23ce6b;
+        text-shadow: 3px 3px black;
+    }
+    .info-skills-card{
+        font-size: 1em;
+        padding: 1em;
+        color:#EDF5FC;
+    }
+    .contact-info{
+    text-align: center;
+  margin: 0px;
+  font-size: 2em;
+padding: 10px 0px;
+  background: #272d2d;
+}
+}
